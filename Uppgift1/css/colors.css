@@ -1,0 +1,54 @@
+/* 
+    Colors
+        Blue color: #2baaec
+        Green color: #25e6c8
+        Title color: #363636
+        Text color: #626262
+        Placeholder color: #dedede
+        Background color: #f7f7f7
+        Text footer color: #f3fbff
+
+*/
+
+:root {
+    --primary-color: #2baaec;
+    --primary-color-rgb: 43, 170, 236;
+    --secondary-color: #25e6c8;
+    --title-color: #363636;
+    --text-color: #626262;
+    --placeholder-color: #dedede;
+    --background-color: #f7f7f7;
+    --textfooter-color: #f3fbff;
+}
+
+.bg-blue {
+    background-color: var(--primary-color);
+}
+
+.bg-green {
+    background-color: var(--secondary-color);
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.color-secondary {
+    color: var(--secondary-color);
+}
+
+/* CLASS SPECIFIC BACKGROUND COLORS */
+.bg-showcase, .bg-overlay {
+    background-color: var(--placeholder-color);
+}
+
+.bg-services {
+    background-color: var(--background-color);
+}
+
+.bg-appoint {
+    background-color: rgba(var(--primary-color-rgb), 0.8);
+    /* background-color: var(--primary-color);
+    opacity: 0.8; */
+}
+

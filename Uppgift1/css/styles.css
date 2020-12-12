@@ -1,0 +1,165 @@
+/* 
+    Colors
+        Blue color: #2baaec
+        Green color: #25e6c8
+        Title color: #363636
+        Text color: #626262
+        Placeholder color: #dedede
+        Background color: #f7f7f7
+        Text footer color: #f3fbff
+
+    Character styles
+        Showcase header: 60pt Roboto Slab
+        Section headers: 40pt Roboto Slab
+        Card Headers: 22pt Roboto Slab
+        Text: 18pt Roboto
+
+*/
+
+@import "colors.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.fakeimg {
+    background-color: grey;
+    color: white;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/* body {
+    margin: 0.5rem 20rem;
+} */
+
+/* LÄNKAR START*/
+a {
+    text-decoration: none;
+}
+
+.socialmedia a, #stats h2 {
+    color: var(--primary-color);
+}
+
+.socialmedia a:hover {
+    color: var(--secondary-color);
+}
+
+.navbar a {
+    color: var(--title-color);
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+/* LÄNKAR END */
+
+
+/* KNAPPAR */
+.btn {
+    padding: 0.75rem 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.125rem;
+    /* width: 100%; */
+}
+
+.btn__primary {
+    background-color: var(--secondary-color);
+    color: var(--textfooter-color);
+}
+
+.btn__secondary {
+    background-color: var(--textfooter-color);
+    color: var(--primary-color);
+}
+
+/* HOOVER PRIMARY */
+.btn__primary:hover {
+    background-color: var(--primary-color);
+}
+
+.btn__secondary:hover {
+    background-color: transparent;
+    color: var(--textfooter-color);
+    border: 1px solid var(--textfooter-color);
+}
+
+/* TOPNAV*/
+
+.topnav, .topnav div {
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.topnav {
+    border-bottom: 1px solid var(--placeholder-color);
+    padding: 0.5rem;
+}
+
+#hours i {
+    padding: 0.5rem;
+}
+
+/* SHOWCASE */
+
+
+/* TEXTFORMATTERING */
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    color: var(--title-color);
+}
+
+h1 {
+    font-size: 3.75rem;
+    line-height: 70px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 50px;
+}
+
+h3 {
+    font-size: 1.375rem;
+    line-height: 30px;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Färgning */
+footer h3, footer p {
+    color: var(--textfooter-color);
+}
