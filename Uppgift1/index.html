@@ -10,14 +10,14 @@
     <title>DentalClinic</title>
 </head>
 <body>
-    <!-- NAVBAR -->
+    <!-- *NAVBAR -->
     <nav>
         <!-- Topnav -->
         <div class="topnav flex">
             <!-- Working hours -->
             <div class="flex" id="hours">
                 <i class="far fa-clock color-primary"></i>
-                <p style="font-size: 1rem;">Working hours: Monday – Friday: 9:00 – 18:00</p>
+                <p>Working hours: Monday – Friday: 9:00 – 18:00</p>
             </div>
             <!-- Social media -->
             <div class="socialmedia">
@@ -28,165 +28,231 @@
             </div>
         </div>
 
+        <!-- <div class="topnav__border"></div> -->
+
         <!-- Navbar with logo -->
-        <div class="navbar">
+        <div class="navbar flex">
             <a href="#"><img src="img\logo.png" alt="Dentalclinic logo"></a>
-            <ul>
+            <ul class="navbar__links navbar--collapse">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            <button class="navbar__toggler">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
         
     </nav>
     <!-- NAVBAR END -->
 
-    <!-- SHOWCASE -->
-    <section class="bg-showcase" id="showcase">
-        <!-- Bild -->
-        <div class="fakeimg" style="height: 200px;"> Image </div>
-        
-        <!-- Textblock -->
-        <div>
-            <h1>Modern technologies
-                ensure safety</h1>
-            <p>Our clinic is equipped with the highest quality medical and dental equipment,
-                which allows for quick and effective treatment of the patient.</p>
-            <button class="btn btn__primary">About our clinic</button>
-        </div>
-
-    </section>
-    <!-- SHOWCASE END -->
-
-    <!-- ABOUT US -->
-    <div id="aboutus">
-        <!-- Textblock -->
-        <div>
-            <!-- Header aboutus -->
-            <h2>Dential<span class="color-primary">Clinic</span> is a modern
-                medical and dental clinic</h2>
-            
-            <!-- Linje -->
-            <hr>
-
-            <!-- Brödtext aboutus -->
-            <p>The DentialClinic Center located in the city of Stockholm is one of the most modern dentistry centers in Sweden. It was created for demanding patients who expect the highest quality of services combined with comfort and a pleasant atmosphere.
-
-                The highest-class dental equipment possessed by the DentialClinic Center enables complicated procedures to be carried out. In our dental practice we combine passion, technology and quality. We strive to fulfill your dreams of a wonderful smile.</p>
-            
-            <!-- Stats -->
-            <div id="stats">
-                <div>
-                    <h2>9 850</h2>
-                    <h4>Happy patients</h4>
+    <!-- *SHOWCASE -->
+    <div class="bg-placeholder" id="showcase">
+        <div class="container flex">
+            <!-- Bild -->
+            <div id="showcase__img">
+                <img src="img/placehold1.png" alt="Siluette1">
+            </div>
+            <!-- Textblock -->
+            <div class="content">
+                <div class="content__text">
+                    <h1>Modern technologies <br>
+                        ensure safety</h1>
+                    <p>Our clinic is equipped with the highest quality medical and dental equipment, <br>
+                        which allows for quick and effective treatment of the patient.</p>
                 </div>
-                <div>
-                    <h2>12 890</h2>
-                    <h4>Performed treatments</h4>
-                </div>
-                <div>
-                    <h2>24/7</h2>
-                    <h4>Open clinic</h4>
-                </div>
+                <button class="btn btn__primary">About our clinic</button>
             </div>
         </div>
+    </div>
+    <!-- SHOWCASE END -->
 
-        <!-- Bild -->
-        <div class="fakeimg" style="height: 200px;"> Image </div>
+    <!-- *ABOUT US -->
+    <div id="aboutus">
+        <div class="container flex">
+            <!-- Textblock -->
+            <div class="content flex-column">
+                <!-- Header aboutus -->
+                <div class="content__text">
+                    <h2>Dential<span class="color-primary">Clinic</span> is a modern <br>
+                        medical and dental clinic</h2>
+                    
+                    <!-- Linje -->
+                    <div class="primary-border"></div>
 
+                    <!-- Brödtext aboutus -->
+                    <p>The DentialClinic Center located in the city of Stockholm is one of the most modern dentistry centers in Sweden. It was created for demanding patients who expect the highest quality of services combined with comfort and a pleasant atmosphere. </p>
+
+                    <p>The highest-class dental equipment possessed by the DentialClinic Center enables complicated procedures to be carried out. In our dental practice we combine passion, technology and quality. We strive to fulfill your dreams of a wonderful smile.</p>
+                </div>
+                <!-- Stats -->
+                <div class="flex-column" id="stats">
+                    <div>
+                        <h2>9 850</h2>
+                        <h4>Happy patients</h4>
+                    </div>
+                    <div>
+                        <h2>12 890</h2>
+                        <h4>Performed treatments</h4>
+                    </div>
+                    <div>
+                        <h2>24/7</h2>
+                        <h4>Open clinic</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Bild -->
+            <div id="aboutus__img">
+                <img src="img/placehold2.png" alt="Siluette2">
+            </div>
+        </div>
     </div>
     <!-- ABOUT US END -->
 
-    <!-- SERVICES -->
-    <div class="bg-services" id="services">
-
-        <!-- CARDS -->
-
-        <!-- Inspection card -->
-        <div class="card">
-            <!-- Icon -->
-            <div class="fakeimg" style="height: 20px;"> Image </div>
-            <!-- Card header -->
-            <h3>Tooth inspection</h3>
-            <!-- Card body -->
-            <p>Comprehensive review of the mouth
-                and detection of broken teeth
-                and other threats.</p>
+    <!-- *SERVICES -->
+    <div class="bg-background" id="services">
+        <div class="content flex-column">
+            <h2>Our services</h2>
+            <div class="primary-border"></div>
         </div>
+        
 
-        <!-- Removal card -->
-        <div class="card">
-            <!-- Icon -->
-            <div class="fakeimg" style="height: 20px;"> Image </div>
-            <!-- Card header -->
-            <h3>Tooth removal</h3>
-            <!-- Card body -->
-            <p>Any broken tooth is a threat to the body,
-                so this danger should be removed
-                from the mouth.</p>
+        <div class="card-container flex-column">
+            <!-- CARDS -->
+
+            <!-- Inspection card -->
+            <div class="card">
+                <!-- Icon -->
+                <div class="icon">
+                    <!-- Icon background -->
+                    <div class="icon__bg">
+                        <!-- Icon picture -->
+                        <div class="icon__pic">
+                            <img src="img/1-inspection-icon.png" alt="Inspection icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card header -->
+                <h3>Tooth inspection</h3>
+                <!-- Card body -->
+                <p>Comprehensive review of the mouth
+                    and detection of broken teeth
+                    and other threats.</p>
+            </div>
+
+            <!-- Removal card -->
+            <div class="card">
+                <!-- Icon -->
+                <div class="icon">
+                    <!-- Icon background -->
+                    <div class="icon__bg">
+                        <!-- Icon picture -->
+                        <div class="icon__pic">
+                            <img src="img/2-removal-icon.png" alt="Inspection icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card header -->
+                <h3>Tooth removal</h3>
+                <!-- Card body -->
+                <p>Any broken tooth is a threat to the body,
+                    so this danger should be removed
+                    from the mouth.</p>
+            </div>
+
+            <!-- Tartar card -->
+            <div class="card">
+                <!-- Icon -->
+                <div class="icon">
+                    <!-- Icon background -->
+                    <div class="icon__bg">
+                        <!-- Icon picture -->
+                        <div class="icon__pic">
+                            <img src="img/3-tartar-icon.png" alt="Tartar icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card header -->
+                <h3>Removal of tartar</h3>
+                <!-- Card body -->
+                <p>Tartar is the enemy of every human being, 
+                    because through his presence we have 
+                    unpleasant breath.</p>
+            </div>
+
+            <!-- Cleaning card-->
+            <div class="card">
+                <!-- Icon -->
+                <div class="icon">
+                    <!-- Icon background -->
+                    <div class="icon__bg">
+                        <!-- Icon picture -->
+                        <div class="icon__pic">
+                            <img src="img/4-cleaning-icon.png" alt="Cleaning icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card header -->
+                <h3>Polishing and cleaning</h3>
+                <!-- Card body -->
+                <p>A simple and safe polishing treatment 
+                    improves the health of teeth that
+                    will get a better look.</p>
+            </div>
+
+            <!-- Implant card -->
+            <div class="card">
+                <!-- Icon -->
+                <div class="icon">
+                    <!-- Icon background -->
+                    <div class="icon__bg">
+                        <!-- Icon picture -->
+                        <div class="icon__pic">
+                            <img src="img/5-implant-icon.png" alt="Implant icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card header -->
+                <h3>Dental implants</h3>
+                <!-- Card body -->
+                <p>The best solution when you can not save
+                    a healthy tooth and you need to apply 
+                    artificial solutions.</p>
+            </div>
+
+            <!-- Protect card -->
+            <div class="card">
+                <!-- Icon -->
+                <div class="icon">
+                    <!-- Icon background -->
+                    <div class="icon__bg">
+                        <!-- Icon picture -->
+                        <div class="icon__pic">
+                            <img src="img/6-protect-icon.png" alt="Protection icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card header -->
+                <h3>Effective protection</h3>
+                <!-- Card body -->
+                <p>The cheapest tooth protection
+                    is their cleaning and a regular
+                    visit to the dentist.</p>
+            </div>
         </div>
-
-        <!-- Tartar card -->
-        <div class="card">
-            <!-- Icon -->
-            <div class="fakeimg" style="height: 20px;"> Image </div>
-            <!-- Card header -->
-            <h3>Removal of tartar</h3>
-            <!-- Card body -->
-            <p>Tartar is the enemy of every human being, 
-                because through his presence we have 
-                unpleasant breath.</p>
-        </div>
-
-        <!-- Cleaning card-->
-        <div class="card">
-            <!-- Icon -->
-            <div class="fakeimg" style="height: 20px;"> Image </div>
-            <!-- Card header -->
-            <h3>Polishing and cleaning</h3>
-            <!-- Card body -->
-            <p>A simple and safe polishing treatment 
-                improves the health of teeth that
-                will get a better look.</p>
-        </div>
-
-        <!-- Implant card -->
-        <div class="card">
-            <!-- Icon -->
-            <div class="fakeimg" style="height: 20px;"> Image </div>
-            <!-- Card header -->
-            <h3>Dental implants</h3>
-            <!-- Card body -->
-            <p>The best solution when you can not save
-                a healthy tooth and you need to apply 
-                artificial solutions.</p>
-        </div>
-
-        <!-- Protect card -->
-        <div class="card">
-            <!-- Icon -->
-            <div class="fakeimg" style="height: 20px;"> Image </div>
-            <!-- Card header -->
-            <h3>Effective protection</h3>
-            <!-- Card body -->
-            <p>The cheapest tooth protection
-                is their cleaning and a regular
-                visit to the dentist.</p>
-        </div>
-
     </div>
     <!-- SERVICES END -->
 
-    <!-- FOOTER -->
+    <!-- *FOOTER -->
     <footer class="bg-overlay">
         <!-- Appointment -->
-        <div class="bg-appoint">
+        <div class="bg-appoint flex-column" id="appointment">
             <h3>Do not wait and make an appointment today!</h3>
             <button class="btn btn__secondary">Book an appointment</button>
         </div>
         <!-- Footer -->
-        <div class="bg-blue">
+        <div class="bg-blue" id="footer">
             <p>© 2020 DentialClinic</p> 
         </div>
     </footer>

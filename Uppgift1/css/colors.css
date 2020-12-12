@@ -37,12 +37,12 @@
     color: var(--secondary-color);
 }
 
-/* CLASS SPECIFIC BACKGROUND COLORS */
-.bg-showcase, .bg-overlay {
+/* CLASS BACKGROUND COLORS */
+.bg-placeholder, .bg-overlay {
     background-color: var(--placeholder-color);
 }
 
-.bg-services {
+.bg-background {
     background-color: var(--background-color);
 }
 

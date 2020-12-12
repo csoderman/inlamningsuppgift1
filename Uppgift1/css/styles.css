@@ -22,14 +22,8 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
-}
-
-.fakeimg {
-    background-color: grey;
-    color: white;
-    width: 100%;
+    margin: 0;
 }
 
 .container {
@@ -41,11 +35,13 @@
     display: flex;
 }
 
-/* body {
-    margin: 0.5rem 20rem;
-} */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 
-/* LÄNKAR START*/
+
+/* *LINKS */
 a {
     text-decoration: none;
 }
@@ -65,10 +61,10 @@ a {
 .navbar a:hover {
     text-decoration: underline;
 }
-/* LÄNKAR END */
+/* LINKS END */
 
 
-/* KNAPPAR */
+/* *BUTTONS */
 .btn {
     padding: 0.75rem 2.5rem;
     border-radius: 0.5rem;
@@ -81,6 +77,8 @@ a {
     /* width: 100%; */
 }
 
+/* btn--round */
+
 .btn__primary {
     background-color: var(--secondary-color);
     color: var(--textfooter-color);
@@ -91,8 +89,7 @@ a {
     color: var(--primary-color);
 }
 
-/* HOOVER PRIMARY */
-.btn__primary:hover {
+.btn__primary:hover, .icon__bg:hover {
     background-color: var(--primary-color);
 }
 
@@ -101,27 +98,168 @@ a {
     color: var(--textfooter-color);
     border: 1px solid var(--textfooter-color);
 }
+/* BUTTONS END */
 
-/* TOPNAV*/
 
-.topnav, .topnav div {
-    justify-content: space-between;
-    align-items: center; 
+/* *BORDERS */
+.primary-border {
+    border: 2px solid var(--secondary-color);
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+/* BORDERS END */
+
+
+/* *TOPNAV */
+.topnav {
+    /* DONT show in mobile */
+    display: none;
+    /* In DESKTOP */
+    padding: 0.5rem;
+    margin: 0 2rem;
+    border-bottom: 1px solid var(--placeholder-color);
 }
 
-.topnav {
-    border-bottom: 1px solid var(--placeholder-color);
-    padding: 0.5rem;
+/* .topnav__border {
+    border: 1px solid var(--placeholder-color);
+} */
+
+.topnav, #hours {
+    justify-content: space-between;
+    align-items: center; 
 }
 
 #hours i {
     padding: 0.5rem;
 }
+/* TOPNAV END */
 
-/* SHOWCASE */
+
+/* *NAVBAR */
+.navbar {
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__toggler {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.navbar__links li {
+    list-style: none;
+    padding: 1rem;
+}
+
+.navbar--collapse {
+    display: none;
+}
+/* NAVBAR END */
 
 
-/* TEXTFORMATTERING */
+/* *SHOWCASE & ABOUTUS */
+
+.content {
+    align-self: center;
+    text-align: left;
+    padding: 3rem;
+    height: 100%;
+}
+
+.content__text, .content__text p, .content__text h1 {
+    margin-bottom: 2rem;
+}
+
+#showcase .container, #aboutus .container {
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+#showcase__img, #aboutus__img {
+    display: none;
+}
+
+#aboutus .primary-border {
+    width: 50%;
+}
+
+#stats {
+    align-items: center;
+    text-align: center;
+}
+
+#stats h2, #stats h4 {
+    margin: 0.5rem;
+}
+/* SHOWCASE & ABOUT US END */
+
+
+/* *SERVICES */
+
+#services .content {
+    text-align: center;
+    justify-content: center;
+}
+#services .primary-border {
+    width: 33%;
+    align-self: center;
+}
+
+
+.card-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: auto;
+}
+
+/* .icon {
+} */
+
+.icon__bg {
+    min-height: 125px;
+    min-width: 125px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* .icon__pic {
+} */
+
+/* SERVICES END */
+
+
+/* *FOOTER */
+#appointment {
+    padding: 2rem;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#appointment h3 {
+    margin-bottom: 2rem;
+}
+
+#footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* FOOTER EN */
+
+
+/* TEXTFORMAT */
 
 p {
     font-family: 'Roboto', sans-serif;
@@ -135,6 +273,12 @@ h1, h2, h3, h4, a {
     font-weight: normal;
     color: var(--title-color);
 }
+
+footer h3, footer p {
+    color: var(--textfooter-color);
+}
+
+/* TEXTSIZES */
 
 h1 {
     font-size: 3.75rem;
@@ -155,11 +299,50 @@ h4 {
     font-size: 1.125rem;
 }
 
-footer p {
+footer p, #hours p {
     font-size: 1rem;
 }
 
-/* Färgning */
-footer h3, footer p {
-    color: var(--textfooter-color);
+
+/* *MEDIAQUERIES */
+
+@media (min-width:768px) {
+
+    .topnav , .navbar--collapse, #showcase__img, #aboutus__img  {
+        display: flex;
+    }
+
+    .navbar__toggler {
+        display: none;
+    }
+
+    #stats {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 45%;
+    }
+
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        width: 33%;
+    }
+
+    footer {
+        align-items: center;
+    }
+
+    #appointment {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* text-align: left; */
+    }
+
+    #appointment h3 {
+        margin-bottom: 0;
+    }
 }
