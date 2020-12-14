@@ -21,11 +21,11 @@
     --textfooter-color: #f3fbff;
 }
 
-.bg-blue {
+.bg-primary {
     background-color: var(--primary-color);
 }
 
-.bg-green {
+.bg-secondary {
     background-color: var(--secondary-color);
 }
 

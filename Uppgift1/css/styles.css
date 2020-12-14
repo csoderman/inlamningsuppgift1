@@ -28,7 +28,7 @@
 
 .container {
     width: 100%;
-    margin: auto;
+    margin: auto; 
 }
 
 .flex {
@@ -74,7 +74,6 @@ a {
     display: inline-block;
     font-weight: bold;
     font-size: 1.125rem;
-    /* width: 100%; */
 }
 
 /* btn--round */
@@ -107,6 +106,12 @@ a {
     margin-bottom: 3rem;
     margin-top: 1rem;
 }
+
+.topnav-border {
+    border: 1px solid var(--placeholder-color);
+    display: none;
+} 
+
 /* BORDERS END */
 
 
@@ -116,13 +121,8 @@ a {
     display: none;
     /* In DESKTOP */
     padding: 0.5rem;
-    margin: 0 2rem;
-    border-bottom: 1px solid var(--placeholder-color);
+    margin: 0 4.50rem 0 3rem;
 }
-
-/* .topnav__border {
-    border: 1px solid var(--placeholder-color);
-} */
 
 .topnav, #hours {
     justify-content: space-between;
@@ -138,6 +138,7 @@ a {
 /* *NAVBAR */
 .navbar {
     padding: 2rem;
+    margin: 0 2rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -166,9 +167,9 @@ a {
 
 .content {
     align-self: center;
-    text-align: left;
-    padding: 3rem;
-    height: 100%;
+    text-align: center;
+    padding: 2rem;
+    height: 100%; 
 }
 
 .content__text, .content__text p, .content__text h1 {
@@ -182,10 +183,12 @@ a {
 
 #showcase__img, #aboutus__img {
     display: none;
+    width: auto;
+    max-height: 672px;
 }
 
 #aboutus .primary-border {
-    width: 50%;
+    width: auto;
 }
 
 #stats {
@@ -200,7 +203,6 @@ a {
 
 
 /* *SERVICES */
-
 #services .content {
     text-align: center;
     justify-content: center;
@@ -216,14 +218,22 @@ a {
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+    margin: 0 4rem;
 }
 
 .card {
-    margin: auto;
+    /* margin: auto; */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    min-height: 435px;
 }
 
-/* .icon {
-} */
+.card h3, .card p {
+    padding: 0.5rem;
+}
 
 .icon__bg {
     min-height: 125px;
@@ -232,10 +242,12 @@ a {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    padding: 2rem;
 }
 
-/* .icon__pic {
-} */
+.icon {
+    padding: 2rem;
+}
 
 /* SERVICES END */
 
@@ -308,7 +320,11 @@ footer p, #hours p {
 
 @media (min-width:768px) {
 
-    .topnav , .navbar--collapse, #showcase__img, #aboutus__img  {
+    .container {
+        width: 80%;
+    }
+
+    .topnav, .topnav-border, .navbar--collapse, #showcase__img, #aboutus__img  {
         display: flex;
     }
 
@@ -316,15 +332,20 @@ footer p, #hours p {
         display: none;
     }
 
+    .content {
+        text-align: left;
+    }
+
     #stats {
         flex-direction: row;
         justify-content: space-between;
-        width: 45%;
+        max-width: 80%;
     }
 
     .card-container {
         flex-direction: row;
         flex-wrap: wrap;
+        padding: 2rem;
     }
     
     .card {
