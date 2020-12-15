@@ -317,27 +317,29 @@ footer p, #hours p {
 
 
 /* *MEDIAQUERIES */
-
 @media (min-width:480px) {
     p {
         font-size: 1.125rem;
     }
+
     h1 {
         font-size: 3.75rem;
     }
+
     h2 {
         font-size: 2.5rem;
     }
+
     .navbar img {
         max-width: 100%;
     }
+
     .card-container {
         margin: 0 4rem;
     }
 }
 
 @media (min-width:768px) {
-
     .container {
         max-width: 85%;
     }
@@ -355,7 +357,6 @@ footer p, #hours p {
     }
 
     #aboutus .container, #services .container {
-        /* margin-bottom: 1rem; */
         padding-top: 3rem;
     }
 
@@ -364,9 +365,7 @@ footer p, #hours p {
     }
 
     #aboutus .flex {
-        /* flex-wrap: wrap; */
         flex-direction: row-reverse;
-        /* align-items: center; */
     }
 
     #stats {
@@ -382,7 +381,6 @@ footer p, #hours p {
     }
     
     .card {
-        /* width: 33%; */
         flex: 1 0 30%;
         height: 100%;
         padding: 0.5rem;
@@ -396,7 +394,6 @@ footer p, #hours p {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        /* text-align: left; */
     }
 
     #appointment h3 {
@@ -405,7 +402,6 @@ footer p, #hours p {
 }
 
 @media (min-width: 992px) {
-    
     .topnav, .topnav-border, .navbar--collapse {
         display: flex;
     }
