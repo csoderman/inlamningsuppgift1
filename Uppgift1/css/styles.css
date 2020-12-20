@@ -32,7 +32,6 @@ img {
 
 a {
     text-decoration: none;
-    font-family: 'Roboto Slab', serif;
     font-size: 1.125rem;
 }
 
@@ -85,7 +84,7 @@ a {
 
 .topnav-border {
     border-bottom: 1px solid #707070;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 /* BORDERS END */
 
@@ -102,7 +101,7 @@ a {
 
 .socialmedia a {
     color: var(--primary-color);
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
 }
 
 .socialmedia a:hover {
@@ -316,6 +315,7 @@ h4 {
 
 footer p {
     font-size: 1rem;
+    opacity: 0.6;
 }
 /* TEXTFORMAT END */
 
@@ -377,6 +377,7 @@ footer p {
         padding: 4rem 1rem;
     }
     #appointment h3 {
+        font-size: 1.875rem;
         margin-bottom: 0;
     }
 }
