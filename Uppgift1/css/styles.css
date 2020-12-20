@@ -1,68 +1,46 @@
-/* 
-    Colors
-        Blue color: #2baaec
-        Green color: #25e6c8
-        Title color: #363636
-        Text color: #626262
-        Placeholder color: #dedede
-        Background color: #f7f7f7
-        Text footer color: #f3fbff
-
-    Character styles
-        Showcase header: 60pt Roboto Slab
-        Section headers: 40pt Roboto Slab
-        Card Headers: 22pt Roboto Slab
-        Text: 18pt Roboto
-
-*/
-
 @import "colors.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
 
-
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .container {
     width: 100%;
-    margin: auto; 
+    padding: 0 1rem;
+    margin: auto;
 }
 
-.flex {
+.flex, .flex-column {
     display: flex;
 }
 
 .flex-column {
-    display: flex;
     flex-direction: column;
 }
 
+.collapse {
+    display: none;
+}
 
-/* *LINKS */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.125rem;
 }
 
-.socialmedia a, #stats h2 {
-    color: var(--primary-color);
+.roboto-16 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
 }
-
-.socialmedia a:hover {
-    color: var(--secondary-color);
-}
-
-.navbar a {
-    color: var(--title-color);
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-/* LINKS END */
-
 
 /* *BUTTONS */
 .btn {
@@ -101,104 +79,116 @@ a {
 /* *BORDERS */
 .primary-border {
     border: 2px solid var(--secondary-color);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     margin-top: 1rem;
 }
 
 .topnav-border {
-    border: 1px solid var(--placeholder-color);
-    display: none;
-} 
+    border-bottom: 1px solid #707070;
+    opacity: 0.4;
+}
 /* BORDERS END */
 
 
-/* *TOPNAV */
+/** TOPNAV */
 .topnav {
-    /* DONT show in mobile */
-    display: none;
-    /* In DESKTOP */
-    padding: 0.5rem;
-    margin: 0 4.50rem 0 3rem;
+    padding: 1rem 0;
 }
 
-.topnav, #hours {
+.topnav, .navbar {
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
+}
+
+.socialmedia a {
+    color: var(--primary-color);
+    margin-left: 0.5rem;
+}
+
+.socialmedia a:hover {
+    color: var(--secondary-color);
 }
 
 #hours i {
-    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
 }
 /* TOPNAV END */
 
 
-/* *NAVBAR */
+/** NAVBAR */
 .navbar {
-    padding: 2rem;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar-toggler {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    color: var(--primary-color);
-    cursor: pointer;
-}
-
-.navbar img {
-    max-width: 80%;
+    padding: 3rem 0;
 }
 
 .navbar-links li {
     list-style: none;
-    padding: 1rem;
+    margin-left: 2rem;
 }
 
-.navbar--collapse {
-    display: none;
+.navbar-links li a {
+    color: var(--title-color);
+    display: inline-block;
+}
+.navbar-links li a:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    font-size: 2.5rem;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 /* NAVBAR END */
 
 
-/* *SHOWCASE & ABOUTUS */
-.content {
-    align-self: center;
-    text-align: center;
-    padding: 2rem;
-    height: 100%; 
+/** SHOWCASE & ABOUTUS */
+.showcase img, .aboutus img {
+    order: 1;
 }
 
-.content-text, .content-text p, .content-text h1 {
-    margin-bottom: 2rem;
-}
-
-#showcase .container, #aboutus .container {
+.showcase .flex, .aboutus .flex {
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 0, 2rem;
+    
 }
 
-#showcase-img, #aboutus-img {
-    display: none;
-    max-height: 672px;
-}
-
-#stats {
-    align-items: center;
+.content {
+    padding: 2rem 0;
     text-align: center;
 }
 
-#stats h2, #stats h4 {
-    margin: 0.5rem;
+/* SHOWCASE */
+.showcase .content .content-text p {
+    padding: 2rem 0;
 }
-/* SHOWCASE & ABOUT US END */
+
+/* ABOUT US */
+.aboutus .content .content-text p {
+    padding: 1rem 0;
+}
+
+.stats h2 {
+    color: var(--primary-color);
+    padding: 0.5rem 0;
+}
+
+.aboutus img {
+    display: none;
+}
+/* SHOWCASE & ABOUTUS END */
 
 
 /* *SERVICES */
+#services .container {
+    padding: 0;
+}
+
 #services .content {
-    text-align: center;
     justify-content: center;
 }
 
@@ -208,28 +198,44 @@ a {
     margin-bottom: 0;
 }
 
+#services{
+    padding-bottom: 4rem;
+}
+
 .card-container {
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
 }
 
 .card {
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
+    flex: 1 0 30%;
+    padding: 0.5rem;
+    margin: 1rem 2rem;
     min-height: 435px;
 }
 
-.card:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+.card:hover {  
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.137);
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+.card:hover > .icon > .icon-bg { 
+    box-shadow: 0 0 10px 3px var(--primary-color);
+    transition: box-shadow 0.2s ease-in-out;
+    background-color: var(--primary-color);
 }
 
 .card h3, .card p {
     padding: 0.5rem;
+}
+
+.card-text {
+    padding: 0 3rem;
 }
 
 .icon-bg {
@@ -239,15 +245,19 @@ a {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-    padding: 2rem;
+    /* padding: 2rem; */
+    position: relative;
+}
+
+.icon-bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .icon {
     padding: 2rem;
-}
-
-.icon-bg:hover {
-    box-shadow: 0 0 10px 3px var(--primary-color);
 }
 /* SERVICES END */
 
@@ -273,14 +283,13 @@ a {
 /** TEXTFORMAT */
 p {
     font-family: 'Roboto', sans-serif;
-    /* font-size: 1.125rem; */
     line-height: 28px;
     color: var(--text-color);
 }
 
 h1, h2, h3, h4, a {
     font-family: 'Roboto Slab', serif;
-    font-weight: normal;
+    font-weight: 400;
     color: var(--title-color);
 }
 
@@ -288,18 +297,12 @@ footer h3, footer p {
     color: var(--textfooter-color);
 }
 
-
-/** TEXTSIZES */
 h1 {
-    /* font-size: 3.75rem; */
     font-size: 2.5rem;
-    line-height: 70px;
 }
 
 h2 {
-    /* font-size: 2.5rem; */
     font-size: 2rem;
-    line-height: 50px;
 }
 
 h3 {
@@ -311,133 +314,113 @@ h4 {
     font-size: 1.125rem;
 }
 
-footer p, #hours p {
+footer p {
     font-size: 1rem;
 }
+/* TEXTFORMAT END */
 
 
-/* *MEDIAQUERIES */
-@media (min-width:480px) {
-    p {
-        font-size: 1.125rem;
-    }
-
-    h1 {
-        font-size: 3.75rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    .navbar img {
-        max-width: 100%;
-    }
-
-    .card-container {
-        margin: 0 4rem;
-    }
-}
-
-@media (min-width:768px) {
+/** MEDIAQUERIES */
+@media (min-width: 768px) {
     .container {
-        max-width: 85%;
+        max-width: 720px;
     }
-
-    #showcase-img, #aboutus-img  {
+    .collapse {
         display: flex;
     }
 
-    #showcase .container {
-        padding-top: 1rem;
-    }
-
-    #aboutus .container, #showcase .container {
-        flex-wrap: wrap-reverse;
-    }
-
-    #aboutus .container, #services .container {
-        padding-top: 3rem;
-    }
-
-    #services .container {
-        padding-bottom: 3rem;
-    }
-
-    #aboutus .flex {
-        flex-direction: row-reverse;
-    }
-
-    #stats {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .card-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 2rem;
-        margin: auto;
-    }
-    
-    .card {
-        flex: 1 0 30%;
-        height: 100%;
-        padding: 0.5rem;
-    }
-
-    footer {
-        align-items: center;
-    }
-
-    #appointment {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #appointment h3 {
-        margin-bottom: 0;
-    }
-}
-
-@media (min-width: 992px) {
-    .topnav, .topnav-border, .navbar--collapse {
-        display: flex;
-    }
-
-    .navbar {
-        margin: 0 2rem;
-    }
-
+    /* NAVBAR */
     .navbar-toggler {
         display: none;
     }
 
-    #stats {
-        justify-content: space-around;
+    /* SHOWCASE & ABOUTUS IMAGES*/
+    .showcase img, .aboutus img {
+        order: 0;
+        margin-top: 2rem;
     }
-}
 
-@media (min-width: 1600px) {
-    #aboutus .container, #showcase .container {
-        flex-wrap: nowrap;
-    }
-    
-    .content {
+    /* SHOWCASE */
+    .showcase .content {
+        margin: 0 4rem;
         text-align: left;
     }
-
-    #aboutus .content {
-        margin-right: 12rem;
+    h2 {
+        font-size: 2.5rem;
+        line-height: 50px;
+    }
+    .showcase .flex {
+        flex-wrap: nowrap;
+        align-items: center;
     }
 
-    #aboutus-img {
-        margin-right: 8rem;
+    /* SERVICES */
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+
+    }
+    .card {
+        align-self: stretch;
+        margin: 1rem
+    }
+    .card-text {
+        padding: 0 1rem;
     }
 
-    #stats {
+    /* FOOTER */
+    #appointment {
+        flex-direction: row;
         justify-content: space-between;
-        max-width: 80%;
+        align-items: center;
+        padding: 4rem 1rem;
+    }
+    #appointment h3 {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    h1 {
+        font-size: 3.75rem;
+        line-height: 70px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    .aboutus .flex {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .stats {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        margin-right: 2rem;
+        padding: 1rem 0;
+    }
+    .aboutus .container .content {
+        margin-right: 10rem;
+        text-align: left;
+    }
+    .aboutus img {
+        display: flex;
+        margin-top: 4rem;
+    }
+    .card-text {
+        padding: 0 2rem;
+    }
+    #services .content h2 {
+        margin-top: 4rem;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
     }
 }
