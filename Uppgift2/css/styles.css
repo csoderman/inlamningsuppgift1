@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    --jood-primary-color: #ffbb00;
+    --jood-primary-color-rgb: 255, 187, 0;
+    --jood-text-color: #8a8a8a;
+    --jood-header-color: #333333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: var(--jood-text-color);
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: var(--jood-header-color);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+textarea {
+    resize: none;
+}
+
+::placeholder {
+    color: #CCCCCC !important;
+}
+
+.text-jood-primary {
+    color: var(--jood-primary-color);
+}
+
+.bg-jood-primary {
+    background-color: var(--jood-primary-color);
+}
+
+/* BUTTONS */
+.btn {
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+}
+.btn-warning {
+    background-color: var(--jood-primary-color);
+}
+.btn-download {
+    background-color: rgba(204, 204, 204, 0.3);
+    color: #111;
+    border: 1px solid transparent;
+}
+.badge {
+    background-color: rgba(var(--jood-primary-color-rgb), 0.3);
+    color: var(--jood-primary-color);
+    padding: 0.5rem;
+}
+.appstore-link:hover {
+    transform: scale(0.9, 0.9);
+    transition: transform 0.2s ease-in-out;
+}
+/* BUTTONS END */
+
+/** HEADER START */
+.header-bg {
+    background-image: url('../img/header-background.png');
+    background-repeat: no-repeat;
+    background-position: -140px -750px;
+    /* background-attachment: fixed; */
+    height: 1000px;
+}
+
+/** NAVBAR */
+.nav-link {
+    border-bottom: 2px solid transparent;
+}
+.nav-link:hover {
+    color: var(--jood-primary-color);
+    border-color: var(--jood-primary-color);
+}
+.navbar-nav a{
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.navbar-toggler, .navbar-toggler-icon {
+    color: var(--jood-primary-color);
+    border-color: rgba(255, 187, 0, 0.1);
+}
+/* NAVBAR END */
+
+/** SHOWCASE */
+.showcase h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    line-height: 4rem;
+    max-width: 600px;
+}
+.showcase p {
+    max-width: 400px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.showcase {
+    text-align: start;
+}
+.showcase-phones {
+    justify-content: flex-end;
+}
+
+/* .phone {
+    border-radius: 40px;
+} */
+
+#showcase-phone-1 {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    animation: slideInFromBottom 1s ease-in;
+    z-index: 2;
+}
+#showcase-phone-2 {
+    animation: slideInFromTop 1s ease-in;
+    z-index: 1;
+}
+/* SHOWCASE END */
+/* HEADER END */
+
+/** MAIN START */
+/** ABOUT US START */
+.aboutus-text h2, .features-text h2 {
+    max-width: 530px;
+}
+.aboutus-image {
+    order: 0;
+}
+/* ORBIT */
+.circle-orbit-container {
+    position: relative;
+    width: 550px;
+    height: 550px;
+}
+.circle-orbit-container img {
+    position: absolute;
+    z-index: 10;
+    /* opacity: 0.9; */
+}
+.circle-orbit {
+    position: absolute;
+    top: 5%;
+    left: -23%;
+    width: 549px;
+    height: 549px;
+    border: 1px solid rgba(204, 204, 204, 0.3);
+    border-radius: 100%;
+    animation: spin-right 10s linear infinite;
+    z-index: 1;
+}
+.circle-orbit-small {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(204, 204, 204, 0.3);
+    border-radius: 100%;
+    z-index: 1;
+    animation: spin-left 5s linear infinite;
+}
+#ellipse-blue {
+    position: absolute;
+    top: 79.7%;
+    left: 79.7%;
+    z-index: 2;
+}
+#ellipse-orange {
+    position: absolute;
+    top: 81%;
+    left: 81%;
+    z-index: 2;
+}
+/* ABOUT US END */
+
+/** FEATURE START */
+.features-bg {
+    background-image: url('../img/Component\ 1\ –\ 1.png');
+    background-repeat: no-repeat;
+}
+.features-icon {
+    padding: 0.5rem 1rem;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.features-icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+.features-icon-text h2 {
+    font-size: 1.25rem;
+}
+.features-icon-text p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+/* FEATURE END */
+
+/**APPLICATION SCREENS START  */
+.jood-stats-bg {
+    background-image: url('../img/map\ Layer\ 815.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.jood-stats h2 {
+    color: #3096FE;
+}
+.jood-stats p {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--jood-header-color);
+}
+.splide__arrows button {
+    background: transparent;
+}
+.splide__slide.is-active {
+    opacity: 1;
+}
+.splide__slide {
+    opacity: .4;
+}
+/*APPLICATION SCREENS END  */
+
+/** BANNER START */
+.banner-bg {
+    background-image: url('../img/banner\ bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-text h2 {
+    font-weight: 700;
+    font-size: 3.125rem;
+    /* max-width: 700px; */
+}
+.appstores {
+    justify-content: center;
+}
+/* BANNER END */
+
+/** CONTACT START */
+.form-control {
+    background-color: #FBFBFB;
+    border: 1px solid transparent;
+    padding: 1.5rem;
+    color: #CCCCCC;
+}
+/* CONTACT END */
+/* MAIN END */
+
+/** FOOTER START */
+.footer-bg {
+    background-image: url('../img/footer\ bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.social-link {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 0 0.5rem;
+}
+/* FOOTER END */
+
+/** ANIMATION START */
+@keyframes spin-right {
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes spin-left {
+    100% {
+      transform: rotate(-360deg);
+    }
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/** MEDIAQUERIES */
+
+@media (min-width: 1500px) {
+    .banner-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* grid-template-columns: repeat(auto-fit, 12, 1fr); */
+        gap: 2rem;
+    }
+    .banner-text {
+        grid-column: 1 / 7;
+    }
+    .phone-banner {
+        grid-column: 9 / 12;
+    }
+    .banner-text h2 {
+        max-width: 700px;
+        text-align: start;
+    }
+    .banner-text p {
+        max-width: 600px;
+        text-align: start;
+    }
+    .appstores {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1500px) {
+    .phone-tilt {
+        width: 100%;
+        margin: auto;
+    }
+    .header-bg {
+        background-position: -240px -750px;
+    }
+}
+
+@media (max-width: 1199px) {
+    /* HEADER */
+    .nav-link:hover {
+        border-color: transparent;
+    }
+    .showcase-phones {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+    .phone {
+        max-height: 500px;
+        /* border-radius: 0%; */
+    }
+    .showcase h1 {
+        max-width: 80%;
+    }
+    .showcase p {
+        max-width: 80%;
+    }
+    /* HEADER END */
+    /* ABOUT US */
+    .aboutus {
+        margin-top: 5rem;
+    }
+    .aboutus-text {
+        width: 100%;
+        
+    }
+    .aboutus-image {
+        order: 2;
+        margin-top: 3rem;
+    }
+    /* ABOUTUS END */
+    /* FEATURES */
+    .phone-tilt {
+        margin-top: 2rem;
+        height: auto;
+    }
+    /* FEATURES EN */
+}
+@media (max-width: 991px) {
+    .showcase {
+        text-align: center;
+    }
+    .showcase h1 {
+        max-width: 100%;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+    }
+    .showcase p {
+        max-width: 100%;
+    }
+    .showcase-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    #showcase-phone-2 {
+        animation: slideInFromBottom 1s ease-in;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-bg {
+        background-position: -340px -750px;
+    }
+    .showcase-buttons {
+        flex-direction: column;
+    }
+    .phone-banner img {
+        width: 100%;
+        margin: auto;
+    }
+    .banner-text h2 {
+        font-size: 2.5rem;
+    }
+    .features-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }    
+}
