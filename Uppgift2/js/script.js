@@ -13,3 +13,5 @@ new Splide( '.splide', {
     gap    : '1rem',
     pagination: false,
 } ).mount();
+
+new WOW().init();
