@@ -13,6 +13,7 @@ body {
     font-size: 1rem;
     line-height: 1.8rem;
     color: var(--jood-text-color);
+    overflow-x: hidden;
 }
 
 h2 {
