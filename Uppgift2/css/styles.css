@@ -290,7 +290,6 @@ textarea {
 }
 
 @media (max-width: 1199px) {
-    /* HEADER */
     .nav-link:hover {
         border-color: transparent;
     }
@@ -307,18 +306,13 @@ textarea {
     .showcase p {
         max-width: 80%;
     }
-    /* HEADER END */
-    /* ABOUT US */
     .aboutus-image {
         order: 2;
         margin-top: 3rem;
     }
-    /* ABOUTUS END */
-    /* FEATURES */
     .phone-tilt {
         margin-top: 2rem;
     }
-    /* FEATURES END */
 }
 @media (max-width: 991px) {
     .showcase {
