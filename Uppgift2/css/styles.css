@@ -73,7 +73,8 @@ textarea {
 .header-bg {
     background-image: url('../img/header-background.png');
     background-repeat: no-repeat;
-    background-position: -140px -750px;
+    background-position: center bottom;
+    /* background-position: -140px -750px; */
     /* background-attachment: fixed; */
     height: 1000px;
 }
@@ -126,11 +127,9 @@ textarea {
     position: relative;
     top: 100px;
     left: 100px;
-    /* animation: slideInFromBottom 1s ease-in; */
     z-index: 2;
 }
 #showcase-phone-2 {
-    /* animation: slideInFromTop 1s ease-in; */
     z-index: 1;
 }
 /* SHOWCASE END */
@@ -336,9 +335,7 @@ textarea {
     .showcase-buttons {
         justify-content: center;
     }
-    .showcase-buttons {
-        flex-direction: column;
-    }
+
     .eclogos {
         margin-top: 8rem;
     }
@@ -357,6 +354,9 @@ textarea {
     .aboutus {
         margin-top: 5rem;
     } 
+    .showcase-buttons {
+        flex-direction: column;
+    }
 }
 
 
@@ -373,5 +373,8 @@ textarea {
     }
     .features-grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .eclogos {
+        margin-top: 8rem;
     }
 }
